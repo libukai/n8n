@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+
+    <!-- Pico.css 2.x (10KB) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <!-- HTMX 2.x (14KB) - Always use latest version -->
+    <script src="https://unpkg.com/htmx.org@2.0.7"></script>
+
+    <!-- Alpine.js 3.x (39KB) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js"></script>
+
+    <style>
+        /* HTMX indicator styles */
+        .htmx-indicator {
+            display: none;
+        }
+        .htmx-request .htmx-indicator {
+            display: inline-block;
+        }
+
+        /* Custom styles */
+        :root {
+            --pico-primary: #4F46E5;
+            --pico-font-size: 16px; /* Prevent mobile zoom on input focus */
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Alpine.js component with state and methods -->
+    <div x-data="{
+        // Component state
+        message: 'Hello',
+
+        // Component methods
+        handleAction() {
+            console.log('Action triggered');
+        }
+    }">
+        <main class="container">
+            <article>
+                <header>
+                    <h1>Page Heading</h1>
+                </header>
+
+                <!-- Content here -->
+                <!-- Use Alpine.js for client-side interactions -->
+                <!-- Use HTMX for server communication -->
+
+            </article>
+        </main>
+    </div>
+</body>
+</html>
